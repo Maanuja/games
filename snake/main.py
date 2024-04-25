@@ -7,6 +7,8 @@ from constants import SCREEN_WIDTH, SCREEN_HEIGHT, WHITE, BLACK, RIGHT, LEFT, UP
 # Initialisation de Pygame
 pygame.init()
 
+apple_image = pygame.image.load("apple.png") 
+
 # Fonction de fin de jeu
 def game_over(screen, points, time_elapsed):
     font = pygame.font.SysFont(None, 36)
@@ -75,6 +77,8 @@ def main():
         screen.fill(BLACK)
         snake.draw(screen)
         fruit.draw(screen)
+        fruit.draw(screen)
+
         pygame.display.flip()
 
         # Rafraîchissement de l'écran
